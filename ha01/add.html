@@ -34,8 +34,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">About</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                     </ul>
                 </div>
@@ -45,22 +45,30 @@
         <!-- ACTUAL CONTENT -->
         <div class="container">
             <br>
-            <h1 class="display-4">About</h1>
+            <h1 class="display-4">New Todo</h1>
             
+            <!-- FORM -->
             <br>
-            <div class="card">
-                <div class="card-header">
-                    Info
+            <form>
+                <div class="form-group">
+                    <label for="todoText">TODO</label>
+                    <input class="form-control" id="todoText" aria-describedby="emailHelp" placeholder="Enter what to do">
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Programmierpraktikum: Skalierbare Systeme</h5>
-                    <p class="card-text">This project was created by <a href="https://github.com/elisamarku">elisamarku</a> and <a href="https://github.com/knstntnwltr">knstntnwltr</a>.</p>
-                    <a href="https://github.com/knstntnwltr/1900-progprak" class="btn btn-primary">See the Github Repo</a>
+                <div class="row">
+                    <div class="form group col-8">
+                        <label for="deadline">Deadline</label>
+                        <input class="form-control" id="deadline" placeholder="What Date?">
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="progress">Progress</label>
+                        <input class="form-control" type="number" value="0" id="progress">
+                    </div>
                 </div>
-                <div class="card-footer text-muted">
-                    Sommersemester 2019
-                </div>
-            </div>
+                <button type="submit" class="btn btn-primary">SAVE</button>
+                <button type="button" class="btn btn-secondary" onclick="location.href='index.html'">CANCEL</button>
+                    
+                
+            </form>
         </div>
 
         <!-- Optional JavaScript -->
