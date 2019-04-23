@@ -15,10 +15,10 @@
 
     </head>
 
-    <body>
+    <body class="d-flex flex-column h-100">
 
         <!-- NAVBAR -->
-        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-primary">
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
             <div class="container">
                 
                 <!-- Logo in the top left corner -->
@@ -46,26 +46,26 @@
                 </div>
             </div>
         </nav>
-
+        
         <!-- ACTUAL CONTENT -->
         <div class="container">
-            
+
             <br>
             <h1 class="display-4">
                 Home
-                
-                <!-- + NEW TODO
-                     Button to add new todo. Links to add.html. -->
-                <button class="btn btn-success float-right shadow-sm" onclick="location.href='add.html'">
+
+                <!--[+ NEW TODO]
+                    Button to add new todo. Links to add.html. -->
+                <a class="btn btn-primary float-right shadow-sm" href="add.html" role="button">
                     <!-- CUSTOM PLUS ICON -->
                     <img src="img/plus.svg" style="height: 1.2em;"> NEW TODO
-                </button>
+                </a>
             </h1>
-            
+
             <br>
-            <!-- TABLE -->
+            <!--TABLE-->
             <table class="table table-sm">
-                
+
                 <!-- TABLE-HEADER -->
                 <thead class="thead-light">
                     <tr>
@@ -75,58 +75,54 @@
                         <th scope="col" style="white-space: nowrap;width: 0px;"></th>
                     </tr>
                 </thead>
-                
-                <!-- TABLE-BODY -->
+
+                <!--TABLE-BODY-->
                 <tbody>
-                    
+
                     <tr>
                         <td>Add-Seite hinzufügen</td>
                         <td style="text-align: center;"><span class="badge badge-pill badge-success">100%</span></td>
                         <td>25. April 2019</td>
                         <td><div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-outline-primary btn-sm" onclick="location.href='edit.html'">EDIT</button>
-                            <button type="button" class="btn btn-outline-danger btn-sm">&#9587;</button>
+                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
+                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
                         </div></td>
                     </tr>
-                    
+
                     <tr>
                         <td>Progress editierbar</td>
                         <td style="text-align: center;"><span class="badge badge-pill badge-success">100%</span></td>
                         <td>25. April 2019</td>
                         <td><div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-outline-primary btn-sm" onclick="location.href='edit.html'">EDIT</button>
-                            <button type="button" class="btn btn-outline-danger btn-sm">&#9587;</button>
+                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
+                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
                         </div></td>
                     </tr>
-                    
+
                     <tr>
                         <td>Beispielseite mit Bootstrap</td>
                         <td style="text-align: center;"><span class="badge badge-pill badge-primary">70%</span></td>
                         <td>25. April 2019</td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="location.href='edit.html'">EDIT</button>
-                                <button type="button" class="btn btn-outline-danger btn-sm">&#9587;</button>
-                            </div>
-                        </td>
+                        <td><div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
+                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
+                        </div></td>
                     </tr>
-                    
+
                     <tr>
                         <td>Zur Rücksprache gehen</td>
                         <td style="text-align: center;"><span class="badge badge-pill badge-warning">0%</span></td>
                         <td>26. April 2019</td>
-                        <td>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-outline-primary btn-sm" onclick="location.href='edit.html'">EDIT</button>
-                                <button type="button" class="btn btn-outline-danger btn-sm">&#9587;</button>
-                            </div>
-                        </td>
+                        <td><div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
+                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
+                        </div></td>
                     </tr>
-                    
+
                 </tbody>
-                
+
             </table>
-            
+
         </div>
 
         <!-- Optional JavaScript -->
