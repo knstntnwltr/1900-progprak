@@ -2,7 +2,6 @@
 <html lang="en">
 
     <head>
-        {%block head%}
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +11,6 @@
         <script src="js/bootstrap.min.js"></script>
 
         <title>//TODO</title>
-        {%endblock%}
     </head>
 
     <body>
@@ -55,6 +53,27 @@
             </div>
             {%endblock navbar%}
         </nav>
+
+        <!-- ACTUAL CONTENT -->
+        <div class="container">
+        {%block container%}
+            <br>
+            <h1>
+            {% block h1 %}
+                Home
+
+                <!--[+ NEW TODO]
+                    Button to add new todo. Links to add.html. -->
+                <a class="btn btn-primary float-right shadow-sm" href="add.html" role="button">
+                    <!-- CUSTOM PLUS ICON -->
+                    <img src="img/plus.svg" style="height: 1.2em;"> NEW TODO
+                </a>
+            {% endblock h1 %}
+            </h1>
+
+            <br>
+        {% endblock container %}
+        </div>
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
