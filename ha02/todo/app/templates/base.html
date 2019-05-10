@@ -56,94 +56,6 @@
             {%endblock navbar%}
         </nav>
 
-        <!-- ACTUAL CONTENT -->
-        <div class="container">
-
-            <br>
-            <h1>
-                Home
-
-                <!--[+ NEW TODO]
-                    Button to add new todo. Links to add.html. -->
-                <a class="btn btn-primary float-right shadow-sm" href="add.html" role="button">
-                    <!-- CUSTOM PLUS ICON -->
-                    <img src="img/plus.svg" style="height: 1.2em;"> NEW TODO
-                </a>
-            </h1>
-
-            <br>
-            <!--TABLE-->
-            <table class="table table-sm table-hover">
-
-                <!-- TABLE-HEADER -->
-                <thead class="thead-light">
-                    <tr>
-                        <th scope="col">Text</th>
-                        <th scope="col" style="text-align: center; width: 5em">% Done</th>
-                        <th scope="col">Deadline</th>
-                        <th scope="col" style="text-align:center;width:1em;">Actions</th>
-                    </tr>
-                </thead>
-
-                <!--TABLE-BODY-->
-                <tbody>
-
-                    <tr>
-                        <td>Add-Seite hinzufügen</td>
-                        <td align="center"><span class="badge badge-pill badge-success">100%</span></td>
-                        <td>25. April 2019</td>
-                        <td align="right"><div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
-                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
-                        </div></td>
-                    </tr>
-
-                    <tr>
-                        <td>Progress editierbar</td>
-                        <td align="center"><span class="badge badge-pill badge-success">100%</span></td>
-                        <td>25. April 2019</td>
-                        <td align="right"><div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
-                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
-                        </div></td>
-                    </tr>
-
-                    <tr>
-                        <td>Beispielseite mit Bootstrap</td>
-                        <td align="center"><span class="badge badge-pill badge-primary">70%</span></td>
-                        <td>25. April 2019</td>
-                        <td align="right"><div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
-                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
-                        </div></td>
-                    </tr>
-
-                    <tr>
-                        <td>Zur Rücksprache gehen</td>
-                        <td align="center"><span class="badge badge-pill badge-warning">0%</span></td>
-                        <td>26. April 2019</td>
-                        <td align="right"><div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
-                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
-                        </div></td>
-                    </tr>
-
-                    <tr>
-                        <td>Aufgabe, die einen unnötig langen Text und ein längeres Datum hat</td>
-                        <td align="center"><span class="badge badge-pill badge-warning">0%</span></td>
-                        <td>26. November 2019</td>
-                        <td align="right"><div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary btn-sm" href="edit.html" role="button">EDIT</a>
-                            <a class="btn btn-outline-danger btn-sm" role="button" href="#">&#9587;</a>
-                        </div></td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
@@ -151,5 +63,6 @@
         <script src="js/bootstrap.min.js"></script>
         {%endblock body%}
     </body>
+
 
 </html>
