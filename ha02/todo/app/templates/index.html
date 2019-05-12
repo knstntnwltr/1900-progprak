@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+{% block navHome %}active{% endblock %}
+{% block h1 %}
+    Home
+    <a class="btn btn-primary float-right shadow-sm" href="/add" role="button">+ NEW TODO</a>
+{% endblock %}
+{% block container %}
+    <table class="table table-sm table-hover">
+
+        <!-- TABLE-HEADER -->
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Text</th>
+                <th scope="col" style="text-align: center; width: 5em">% Done</th>
+                <th scope="col">Deadline</th>
+                <th scope="col" style="text-align:center;width:1em;">Actions</th>
+            </tr>
+        </thead>
+
+        <!--TABLE-BODY-->
+        <tbody>
+
+            {% for todo in todos %}
+            <tr>
+                <td>{{ todo.text }}</td>
+                <td style="text-align: center"><span class="badge badge-pill
+                    {% if todo.percent == 100 %}
+                        badge-success
+                    {% elif todo.percent > 0 %}
+                        badge-warning
+                    {% else %}
+                        badge-danger
+                    {% endif %}">{{ todo.percent }}%</span></td>
+
+                <td>{{ todo.date }}</td>
+                <td style="text-align: right"><div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-outline-primary btn-sm" href="{% url 'edit' todo.id %}" role="button">EDIT</a>
+                    <a class="btn btn-outline-danger btn-sm" role="button" href="{% url 'delete' todo.id %}">&#9587;</a>
+                </div></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+{% endblock %}
