@@ -5,24 +5,27 @@ from .forms import TodoForm
 
 # Create your views here.
 def index(request):
-    c = {'todos': Todo.objects.all()}
-    return render(request, 'index.html', c)
+    # get all todos and render as context
+    return render(request, 'index.html', {'todos': Todo.objects.all()})
 
 
 def about(request):
+    # simply show about sceen
     return render(request, 'about.html')
 
 
 def add(request):
+    # create new object
     todo = Todo()
-    todo.text = ""
-    todo.date = ""
-    todo.percent = 0
+    # fill it with nothing
+    todo.text, todo.date, todo.percent = '', '', 0
     todo.save()
+    # render teh site with empty form
     return render(request, 'edit.html', {'todo': todo})
 
 
 def edit(request, todo_id):
+    # get object and give as context
     todo = get_object_or_404(Todo, pk=todo_id)
     return render(request, 'edit.html', {'todo': todo})
 
@@ -37,12 +40,14 @@ def update(request, todo_id):
             todo.percent = form.cleaned_data.get('percent')
             todo.save()
             return HttpResponseRedirect('/')
-        return HttpResponse('not valid, {}'.format(request.POST))
+        return HttpResponse('not valid')
     else:
         return HttpResponse('not POST')
 
 
 def delete(request, todo_id):
+    # get object, delete
     todo = Todo.objects.get(pk=todo_id)
     todo.delete()
+    # redirect to home
     return HttpResponseRedirect('/')
